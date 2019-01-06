@@ -1,85 +1,27 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <header>
+      <div class="cxinhao">信号</div>
+      <div class="ckuang">搜索框</div>
+    </header>
+    <footer>
+      <div class="clunbo">轮播</div>
+      <div>
+        <ul class="cfen">
+          <li class="cfenlei" v-for="item in arr" :key="item">{{item}}</li>
+        </ul>
+        <div class="chantu">
+          <p>产品图片</p>
+        </div>
+        <ul>
+          <li v-for="item in str" :key="item.value">
+            <h2>{{item.name}}</h2>
+            <p>{{item.xiangqing}}</p>
+            <p>{{item.qian}}</p>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -88,26 +30,59 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      arr:['1','2','3','4','5','6','7','8'],
+      str:[
+        {name:'挂饰空',xiangqing:'智能',qian:'$500'},
+        {name:'挂饰空调',xiangqing:'智能',qian:'$500'},
+        {name:'挂饰空调',xiangqing:'智能',qian:'$500'}]
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+.hello{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+ 
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+header{
+  height: 80px;
+ 
+  /* position: fixed; */
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.cxinhao{
+  height: 20px;
+  background: blueviolet;
 }
-a {
-  color: #42b983;
+.ckuang{
+  height: 60px;
+  background:sienna;
+}
+footer{
+  overflow: scroll;
+  flex: 1;
+}
+.clunbo{
+  height: 160px;
+  background: brown
+}
+.cfen{
+  display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+.cfenlei{
+  width: 24%;
+  height: 92px;
+  
+   
+  border: 1px solid #bc8f8f;
+}
+.chantu{
+  height: 150px;
+  background: chartreuse;
 }
 </style>
