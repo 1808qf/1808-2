@@ -2,13 +2,15 @@
   <div class="hello">
     <header>
       <div class="ckuang">
-        
+        <h2>商城</h2>
+        <div class="csousuo">
         <mt-search
           v-model="value"
           cancel-text="取消"
           placeholder="搜索">
         </mt-search>
-        
+        </div>
+         <span class="iconfont icon-gouwucheman"></span>
       </div>
     </header>
     <footer>
@@ -39,8 +41,9 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-  name: 'HelloWorld',
+  name: 'shangpins',
   data () {
     return {
       arr:['1','2','3','4','5','6','7','8'],
@@ -51,7 +54,15 @@ export default {
       value:"",
 
     }
-  }
+  },
+  mounted() {
+    // axios({
+    //   method:'get',
+    //   url:'http://10.8.155.74:8080/airdb/GoodsTypeAll.do'
+    // }).then((data)=>{
+    //   console.log(data.data.data)
+    // })
+  },
 }
 </script>
 
@@ -64,18 +75,26 @@ export default {
  
 }
 header{
-  height: 60px;
+  height:52px;
  
  
 }
 
 .ckuang{
-  height: 60px;
-  background:sienna;
+  display: flex;
+  height: 52px;
+  background:#d9d9d9;
 }
+
 footer{
   overflow: scroll;
   flex: 1;
+}
+.csousuo{
+  width: 67%;
+}
+.ckuang h2,.ckuang span{
+  line-height: 52px;
 }
 .clunbo{
   height: 160px;
