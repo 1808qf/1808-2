@@ -23,7 +23,7 @@
       </div>
       <div>
         <ul class="cfen">
-          <li class="cfenlei" v-for="item in arr" :key="item">{{item}}</li>
+          <li class="cfenlei" v-for="item in arr" :key="item"><router-link to="/fenlei" tag="span">{{item}}</router-link></li>
         </ul>
         <div class="chantu">
           <p>产品图片</p>
@@ -52,10 +52,11 @@ export default {
         {name:'挂饰空调',xiangqing:'智能',qian:'$500'},
         {name:'挂饰空调',xiangqing:'智能',qian:'$500'}],
       value:"",
-
+      
     }
   },
   mounted() {
+    console.log(this.sto)
     // axios({
     //   method:'get',
     //   url:'http://10.8.155.74:8080/airdb/GoodsTypeAll.do'
@@ -120,13 +121,9 @@ footer{
   height: 150px;
   background: chartreuse;
 }
-.cone{
-  background:red;
-}
-.ctwo{
-  background: aqua;
-}
-.cserry{
-  background: chocolate;
+.cfenlei span{
+  display: block;
+    width: 100%;
+    height: 100%;
 }
 </style>
