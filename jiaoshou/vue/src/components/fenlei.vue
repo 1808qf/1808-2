@@ -16,7 +16,7 @@
              <div>
                  <p>热门分类</p>
                  <ul>
-                     <li v-for="item in re" :key="item.id">{{item}}</li>
+                     <li v-for="item in re" :key="item.id"><router-link to="/xiangqingye" tag="span">{{item}}</router-link></li>
                  </ul>
                  <p>热门单品</p>
                  <div class="cdan" v-for="item in xinghao" :key="item.id">
