@@ -1,11 +1,24 @@
 <template>
   <div class="hello">
     <header>
-      <div class="cxinhao">信号</div>
-      <div class="ckuang">搜索框</div>
+      <div class="ckuang">
+        
+        <mt-search
+          v-model="value"
+          cancel-text="取消"
+          placeholder="搜索">
+        </mt-search>
+        
+      </div>
     </header>
     <footer>
-      <div class="clunbo">轮播</div>
+      <div class="clunbo">
+        <mt-swipe :auto="4000">
+          <mt-swipe-item class="cone"><img src="../assets/vue1.jpg"/></mt-swipe-item>
+          <mt-swipe-item class="ctwo"><img src="../assets/vue2.jpg"/></mt-swipe-item>
+          <mt-swipe-item class="cserry"><img src="../assets/vue3.jpg"/></mt-swipe-item>
+        </mt-swipe>
+      </div>
       <div>
         <ul class="cfen">
           <li class="cfenlei" v-for="item in arr" :key="item">{{item}}</li>
@@ -34,7 +47,9 @@ export default {
       str:[
         {name:'挂饰空',xiangqing:'智能',qian:'$500'},
         {name:'挂饰空调',xiangqing:'智能',qian:'$500'},
-        {name:'挂饰空调',xiangqing:'智能',qian:'$500'}]
+        {name:'挂饰空调',xiangqing:'智能',qian:'$500'}],
+      value:"",
+
     }
   }
 }
@@ -49,14 +64,11 @@ export default {
  
 }
 header{
-  height: 80px;
+  height: 60px;
  
-  /* position: fixed; */
+ 
 }
-.cxinhao{
-  height: 20px;
-  background: blueviolet;
-}
+
 .ckuang{
   height: 60px;
   background:sienna;
@@ -68,6 +80,10 @@ footer{
 .clunbo{
   height: 160px;
   background: brown
+}
+.clunbo img{
+  width: 100%;
+  height: 100%;
 }
 .cfen{
   display: flex;
@@ -84,5 +100,14 @@ footer{
 .chantu{
   height: 150px;
   background: chartreuse;
+}
+.cone{
+  background:red;
+}
+.ctwo{
+  background: aqua;
+}
+.cserry{
+  background: chocolate;
 }
 </style>
