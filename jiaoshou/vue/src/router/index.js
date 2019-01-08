@@ -7,6 +7,12 @@ import xiangqing from '@/components/xiangqing'
 import pingjia from '@/components/pingjia'
 import xiangqingye2 from '@/components/xiangqingye2'
 import pinbiao from '@/components/pinbiao'
+import fuwuye from '@/components/fuwuye'
+import anzhuang from '@/components/anzhuang'
+import weixiu from '@/components/weixiu'
+import jindu from '@/components/jindu'
+import kefu from '@/components/kefu'
+import wangdian from '@/components/wangdian'
 
 
 Vue.use(Router)
@@ -44,6 +50,31 @@ export default new Router({
     {
       path:'/pinbiao',
       component:pinbiao
-    }
+    },
+    {
+      path:'/fuwuye',
+      component:fuwuye
+    },
+    {
+      path:'/jindu',
+      component:jindu
+    },
+    {
+      path:'/weixiu',
+      component:weixiu
+    },
+    {
+      path:'/anzhuang',
+      component:anzhuang
+    },
+    {
+      path:'/wangdian',
+      component:wangdian
+    },
+    {
+      path:'/kefu',
+      component:kefu
+    },
+
   ]
 })
