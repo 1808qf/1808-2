@@ -1,6 +1,10 @@
 <template>
-  <div>
-      <h2>详情</h2>
+  <div class="ctux">
+      <img src="../assets/vue1.jpg">
+      <img src="../assets/vue2.jpg">
+      <img src="../assets/vue2.jpg">
+      <img src="../assets/vue2.jpg">
+      <img src="../assets/vue2.jpg">
   </div>
 </template>
 
@@ -16,4 +20,8 @@ export default {
 
 </script>
 <style>
+    .ctux img{
+        width:100%;
+        height: 100%;
+    }
 </style>
