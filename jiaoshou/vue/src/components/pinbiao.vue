@@ -100,6 +100,7 @@ form input{
     background: #e2e2e2;
 }
 .clie{
+   
     border-bottom:2px solid #e2e2e2; 
     height: 24%;
     display: flex;

@@ -14,7 +14,7 @@
         <div class="cche">
             <span class="iconfont icon-shoucang"></span>
             <span class="iconfont icon-gouwuche2"></span>
-            <mt-button type="primary">加入购物车</mt-button>
+            <mt-button type="primary" @click="foo()">加入购物车</mt-button>
             <mt-button type="danger">立即购买</mt-button>
         </div>
 
@@ -35,6 +35,9 @@ export default {
     methods: {
         fanhui(){
             this.$router.go(-1)
+        },
+        foo(){
+            console.log(33)
         }
     },
 
