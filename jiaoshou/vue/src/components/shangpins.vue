@@ -40,12 +40,14 @@
   </div>
 </template>
 
+
 <script>
 import axios from 'axios';
 export default {
   name: 'shangpins',
   data () {
     return {
+    	tit:'商城首页' ,//控制的是头部标题
       arr:['1','2','3','4','5','6','7','8'],
       str:[
         {name:'挂饰空',xiangqing:'智能',qian:'$500'},
@@ -57,6 +59,7 @@ export default {
   },
   mounted() {
     console.log(this.sto)
+    this.$emit('toparent',this.tit)
     // axios({
     //   method:'get',
     //   url:'http://10.8.155.74:8080/airdb/GoodsTypeAll.do'
@@ -69,7 +72,11 @@ export default {
 
 
 <style scoped>
+ul,li{
+	list-style:none;
+}
 .hello{
+	
   height: 100vh;
   display: flex;
   flex-direction: column;
