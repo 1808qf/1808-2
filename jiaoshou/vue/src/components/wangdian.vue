@@ -7,7 +7,7 @@
      </header>
      <section>
     <div class="cdian">
-             <p>杭州市拱野区<i class="iconfont "></i><span>|</span>附近网点</p>
+             <p>杭州市拱野区<i class="iconfont icon-fanhui4"></i><span>|</span>附近网点</p>
              
              
          </div>
@@ -49,6 +49,9 @@ header span{
 section{
     flex: 1;
     overflow: auto;
+}
+.cdian span{
+    margin: 0 10px;
 }
 
 </style>
